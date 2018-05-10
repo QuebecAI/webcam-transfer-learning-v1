@@ -91,16 +91,16 @@ ui.handler = async function(label) {
   document.body.removeAttribute('data-active');
 }
 
-upButton.addEventListener('mousedown', () => handler(0));
+upButton.addEventListener('mousedown', () => ui.handler(0));
 upButton.addEventListener('mouseup', () => mouseDown = false);
 
-downButton.addEventListener('mousedown', () => handler(1));
+downButton.addEventListener('mousedown', () => ui.handler(1));
 downButton.addEventListener('mouseup', () => mouseDown = false);
 
-leftButton.addEventListener('mousedown', () => handler(2));
+leftButton.addEventListener('mousedown', () => ui.handler(2));
 leftButton.addEventListener('mouseup', () => mouseDown = false);
 
-rightButton.addEventListener('mousedown', () => handler(3));
+rightButton.addEventListener('mousedown', () => ui.handler(3));
 rightButton.addEventListener('mouseup', () => mouseDown = false);
 
 ui.drawThumb = function(img, label) {
