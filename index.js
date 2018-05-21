@@ -147,7 +147,8 @@ async function predict() {
     });
 
     const classId = (await predictedClass.data())[0];
-
+    predictedClass.dispose();
+    
     ui.predictClass(classId);
     await tf.nextFrame();
   }
